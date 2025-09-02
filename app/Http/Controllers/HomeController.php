@@ -4,20 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class JobController extends Controller
+class HomeController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $jobs = [
-            ['id' => 1, 'title' => 'Job 1'],
-            ['id' => 2, 'title' => 'Job 2'],
-            ['id' => 3, 'title' => 'Job 3'],
-        ];
-        $title = 'Job Listings - Workopia';
-        return view('jobs.index', compact('jobs', 'title'));
+        return view('pages.welcome');
     }
 
     /**
@@ -25,7 +19,7 @@ class JobController extends Controller
      */
     public function create()
     {
-        return view('jobs.create');
+        //
     }
 
     /**

@@ -2,9 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JobController;
-Route::get('/', function () {
-    return view('welcome');
-});
-
+use App\Http\Controllers\HomeController;
+    
+Route::get('/', [HomeController::class, 'index']);
 Route::get('/jobs', [JobController::class, 'index']);
 Route::get('/jobs/create', [JobController::class, 'create'] )->name('jobs.create');
