@@ -16,8 +16,7 @@ class JobController extends Controller
             ['id' => 2, 'title' => 'Job 2'],
             ['id' => 3, 'title' => 'Job 3'],
         ];
-        $title = 'Job Listings - Workopia';
-        return view('jobs.index', compact('jobs', 'title'));
+        return view('jobs.index', compact('jobs'));
     }
 
     /**
