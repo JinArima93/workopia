@@ -14,17 +14,15 @@
         crossorigin="anonymous"
         referrerpolicy="no-referrer"
         />
-        
+    <!-- Vite -->
      @vite('resources/css/app.css')
 </head>
 <body class="bg-gray-100">
     <x-header />
      @if(request()->is('/'))
-  @if(request()->is('/'))
     <x-hero />
+    @endif
     <x-top-banner />
-  @endif
-  @endif
     <main class="container mx-auto mt-4 p-4">
         {{ $slot }}
     </main>

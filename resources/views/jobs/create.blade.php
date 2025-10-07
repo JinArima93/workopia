@@ -1,10 +1,18 @@
 <x-layout>
     <x-slot name="title">Create Job</x-slot>
     <h1 class="text-3xl font-bold mb-4">Create a New Job</h1>
-    <form >
+    <form action="/jobs" method="POST">
         @csrf
-        <label for="title">Job Title:</label>
-        <input type="text" id="title" name="title" required>
-        <button type="submit">Create Job</button>
+        <input type="text" name="title" placeholder="Title" value="{{ old('title') }}">
+        <!-- Error Message for Title -->
+        @error('title')
+        <div class="text-red-500 mt-2 text-sm">{{ $message }}</div>
+        @enderror
+        <input type="text" name="description" placeholder="Description" value="{{ old('description') }}">
+        <!-- Error Message for Description -->
+        @error('description')
+        <div class="text-red-500 mt-2 text-sm">{{ $message }}</div>
+        @enderror
+        <button type="submit">Submit</button>
     </form>
 </x-layout>

@@ -43,7 +43,7 @@ And see the same result.
 Let's add some data to the database. We can do this by creating a new instance of the model and setting the properties:
 
 ```php
-$Job::create([
+$job::create([
     'title' => 'Job One',
     'description' => 'This is an description for job one',
 ]);
